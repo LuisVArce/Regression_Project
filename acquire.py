@@ -25,11 +25,10 @@ def get_zillow(use_cache = True):
         print('Status: Acquiring data from cached csv file..')
         
         return pd.read_csv(zillow_file)
-        qry = '''
+        query = '''
          SELECT bedroomcnt as bedroom_count, bathroomcnt as bath_count, 
                 calculatedfinishedsquarefeet as finished_sq_feet, taxvaluedollarcnt as home_value, 
-                 yearbuilt, fips
-                 
+                 yearbuilt, fips        
         FROM properties_2017
         JOIN propertylandusetype using (propertylandusetypeid)
         JOIN predictions_2017 ON properties_2017.id = predictions_2017.id
@@ -39,7 +38,7 @@ def get_zillow(use_cache = True):
     
     print('Status: Acquiring data from SQL database..')
     
-    zillow = pd.read_sql(qry, get_conn())
+    zillow = pd.read_sql(query, get_conn())
     
     print('Status: Saving zillow data locally..')
     
