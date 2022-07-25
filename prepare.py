@@ -28,7 +28,11 @@ def get_zillow():
     # if not in local folder, let's import from MySQL and create a .csv file
     else:
         # query necessary to pull the 2017 properties table from MySQL
+<<<<<<< HEAD
         qry = ''' 
+=======
+        query = ''' 
+>>>>>>> 31f9700914b8022c475d32821672362fd01f5cf2
         SELECT
                 bedroomcnt as bedroom_count,
                 bathroomcnt as bath_count,
@@ -45,7 +49,11 @@ def get_zillow():
         '''
         db_url = f'mysql+pymysql://{user}:{password}@{host}/zillow'
         # creating the zillow dataframe using Pandas' read_sql() function
+<<<<<<< HEAD
         df = pd.read_sql(qry, db_url)
+=======
+        df = pd.read_sql(query, db_url)
+>>>>>>> 31f9700914b8022c475d32821672362fd01f5cf2
         df.to_csv(filename)
         return df
 
