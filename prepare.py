@@ -40,8 +40,8 @@ def get_zillow():
         FROM properties_2017
         JOIN propertylandusetype using (propertylandusetypeid)
         JOIN predictions_2017 ON properties_2017.id = predictions_2017.id
-        WHERE propertylandusetype.propertylandusedesc = "Single Family Residential"
-        AND predictions_2017.transactiondate LIKE "2017%%"
+        WHERE predictions_2017.transactiondate = 2017
+        AND propertylandusetype.propertylandusedesc = "Single Family Residential"
         '''
         db_url = f'mysql+pymysql://{user}:{password}@{host}/zillow'
         # creating the zillow dataframe using Pandas' read_sql() function
