@@ -1,1 +1,66 @@
 # Regression_Project
+
+Project Goals and Description:
+Zillow Group, Inc is an American Online Real-estate Marketplace Company Housing Company founded in 2004 in Seattle, WA. With their online presense, Zillow Data Team has capitalized on capturing housing market data and every day millions and millions of data-points are captured, stored. This creates a need for dedicated team of scientists to explore and deduct meaning in these sets. This project is an example of on of the many studies on data to infer meaning. Our goal however, will be focused on the 2017 data for single household homes in three Carlifonia Counties- Orange, L.A. and Ventura. We will construct an additional new machine learning regression model to complement the current one in production with the ultimate purpose of predicting key drivers for assessed tax values for single family properties in the counties stated above. The approach here is adapting newer insight into keys driver features.
+
+Initial Hypothesis/Questions
+Is there a correlation between assessed tax value and:-
+
+A home's square feet?
+Home's number of bedrooms?
+Home's number of bathrooms?
+
+The Project Plan Structure
+This projects follows Data Science Pipeline. Should you wish to recreate the project, follow the following general steps:
+
+(1). Planning
+Define goals, understand the stakeholders and or audience, brain-storm to arrive at the MVP, define end product and purpose. Finally deliver report through presentation.
+(2). Acquisition
+Create a connection with CodeUp Online SQL through conn.py module.
+Call the conn.py function with the acquire.py function.
+Save a cached copy of the .csv file in local machine.
+Import this module and other required python libraries into the main zillow_workspace.ipynb file
+(3). Preparation
+Create a module called prepare.py to hold all functions required to prepare the data for exploration including: - Remove duplicates, empty spaces, encode data, drop unnecessary columns and data outliers, rename columns. - Split the data into train, validate and test sets in ratios: 56% : 24% : 20% respectively.
+(4). Exploration
+With cleaned data prepared from preparion phase, ensure no data leakage and use train subset.
+Utelize the initial questions to guide the project explorations.
+Create visualizations to explain the relationships observed.
+Perform statistical test to infer key driveres through feature engineering.
+Document takeaways that guide the project to modeling.
+(5). Modeling
+Utilize python Sklearn libraries to create, fit and test models in the zillow workspace.ipynb file
+Predict the target variables
+Evaluate the results on the in-sample predictions
+Select the best model, and use on test subsets for out-of-sample observations.
+(6). Delivery
+A final report with summarized results is saved in the zillow_report workbook.
+Deliverables include a 5 minute presentation through Zoom WebCast with the audience of Zillow Data Science Team.
+The key drivers for asssessed tax values stated clearly and best perfoming model presented backed by figures and visul charts.
+Deployment of the entire code and workbooks in public Data Scientist GitHub Account with strict exclusion of sensitive database access information through .gitignore.py.
+Create this** ReadMe.md file with all steps required to reproduce this test.
+Appendix
+Data Dictionary
+
+Column	Description	Dtype
+bedroom_count	The number of bedrooms	float64
+bath_count	The number of bathrooms	float64
+finished_sq_feet	Square footage of property	float64
+home_value	Property tax value dollar amount	float64
+
+To Reconstruct this Project
+You'll require own env.py file to store query connection credentials(access rights to CodeUp SQL is required).
+Read this ReadMe.md file fully and make necessary files
+Set up .gitignore file and ignore env.py, *.csv files
+Create and Repository directory on GitHub.com
+Follow instructions above and run the final zillow_workspace report.
+Modeling
+Perform Linear Regression, Polynomial Regression and Tweedie Regression (GLM).
+Determine best model for prediction of assessed tax value.
+Key Findings
+Overall tax prediction is achieved by Polynomial Regression(Root Mean Squared Error of USD 183,353.21 vs Baseline USD 193,231.11) - a USD 10,000 difference.
+finished_sq_feet is the key driver for home_value followed by bath_room count, and lastly bedroom_count.
+In varying the features, Linear progression model seem to perform better than Polynomial regression.
+Future Study on Unseen Data
+With more time, create new unseen features that will predict home_value
+Heat map shows very strong correlation between bath_room count and finished_sq_feet. How are these features affecting the home_value?
