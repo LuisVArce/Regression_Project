@@ -43,11 +43,14 @@ Create this** ReadMe.md file with all steps required to reproduce this test.
 ## Appendix
 Data Dictionary
 
-Column	Description	Dtype
-bedroom_count	The number of bedrooms	float64
-bath_count	The number of bathrooms	float64
-finished_sq_feet	Square footage of property	float64
-home_value	Property tax value dollar amount	float64
+Columns	and Description	
+- bedroom_count:	The number of bedrooms	
+- bath_count:	The number of bathrooms	
+- finished_sq_feet:	Square footage of property	
+- home_value:	Property tax value dollar amount	
+- year_built: The year a home was built
+- fips: a location identifier
+All converted to floats
 
 ### To Reconstruct this Project
 You'll require own env.py file to store query connection credentials(access rights to CodeUp SQL is required).
@@ -56,7 +59,7 @@ Set up .gitignore file and ignore env.py, *.csv files
 Create and Repository directory on GitHub.com
 Follow instructions above and run the final zillow_workspace report.
 Modeling
-Perform Linear Regression, Polynomial Regression and Tweedie Regression (GLM).
+Perform Linear Regression, LassoLars and Tweedie Regression (GLM).
 Determine best model for prediction of home value.
 ### Key Findings
 .
