@@ -44,10 +44,10 @@ Create this** ReadMe.md file with all steps required to reproduce this test.
 Data Dictionary
 
 Columns	and Description	
-bedroom_count	The number of bedrooms	
-bath_count	The number of bathrooms	
-finished_sq_feet	Square footage of property	
-home_value	Property tax value dollar amount	
+- bedroom_count:	The number of bedrooms	
+- bath_count:	The number of bathrooms	
+- finished_sq_feet:	Square footage of property	
+- home_value:	Property tax value dollar amount	
 All converted to floats
 
 ### To Reconstruct this Project
