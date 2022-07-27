@@ -48,6 +48,8 @@ Columns	and Description
 - bath_count:	The number of bathrooms	
 - finished_sq_feet:	Square footage of property	
 - home_value:	Property tax value dollar amount	
+- year_built: The year a home was built
+- fips: a location identifier
 All converted to floats
 
 ### To Reconstruct this Project
